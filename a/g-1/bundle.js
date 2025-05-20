@@ -28464,9 +28464,9 @@ window.onerror = (ev) => {alert(ev);};
             texture: "stickman_super_texture",
             atlas: "stickman_super_json",
             condition: {
-                level: 150
+                level: 250
             },
-            description: "Tyler the Creator - Finish Level 150",
+            description: "Tyler the Creator - Finish Level 250",
             frames: {
                 spawn: 4,
                 hooked0: 3,
