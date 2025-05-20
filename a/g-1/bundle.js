@@ -28298,7 +28298,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: fa.a,
             texture: "stickman_classic_texture",
             atlas: "stickman_classic_json",
-            description: "The Original",
+            description: "Original - The Original",
             frames: {
                 spawn: 6,
                 hooked0: 5,
@@ -28314,7 +28314,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Ja.a,
             texture: "stickman_dragon_texture",
             atlas: "stickman_dragon_json",
-            description: "Watch 1 video",
+            description: "Dragon - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28333,7 +28333,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 5
             },
-            description: "Finish Level 5",
+            description: "Metal Pipe - Finish Level 5",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28352,7 +28352,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 10
             },
-            description: "Finish Level 10",
+            description: "Mummy - Finish Level 10",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28371,7 +28371,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 20
             },
-            description: "Finish Level 20",
+            description: "Angel - Finish Level 20",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28390,7 +28390,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 30
             },
-            description: "Finish Level 30",
+            description: "Evil Stick - Finish Level 30",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28409,7 +28409,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 50
             },
-            description: "Finish Level 50",
+            description: "Unicorn Diddy - Finish Level 50",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28428,7 +28428,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 75
             },
-            description: "Finish Level 75",
+            description: "Thug - Finish Level 75",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28447,7 +28447,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 100
             },
-            description: "Finish Level 100",
+            description: "Boneca Ambalalu - Finish Level 100",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28466,7 +28466,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 150
             },
-            description: "Finish Level 150",
+            description: "Tyler the Creator - Finish Level 150",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28482,7 +28482,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: va.a,
             texture: "stickman_burger_texture",
             atlas: "stickman_burger_json",
-            description: "Watch 1 video",
+            description: "Burger - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28498,7 +28498,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: _a.a,
             texture: "stickman_cactus_texture",
             atlas: "stickman_cactus_json",
-            description: "Watch 1 video",
+            description: "Solid Snake - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 2,
@@ -28514,7 +28514,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Ta.a,
             texture: "stickman_corgi_texture",
             atlas: "stickman_corgi_json",
-            description: "Watch 1 video",
+            description: "Corgi - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28530,7 +28530,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Ia.a,
             texture: "stickman_unicorn_texture",
             atlas: "stickman_unicorn_json",
-            description: "Watch 1 video",
+            description: "Unicorn - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28546,7 +28546,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Fa.a,
             texture: "stickman_banana_texture",
             atlas: "stickman_banana_json",
-            description: "Watch 1 video",
+            description: "Peely - Watch 1 video",
             frames: {
                 spawn: 2,
                 hooked0: 4,
@@ -28562,7 +28562,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Ua.a,
             texture: "stickman_ninja_texture",
             atlas: "stickman_ninja_json",
-            description: "Watch 1 video",
+            description: "Ninja - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28578,7 +28578,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: ja.a,
             texture: "stickman_sheep_texture",
             atlas: "stickman_sheep_json",
-            description: "Watch 1 video",
+            description: "Sheep - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28594,7 +28594,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Ga.a,
             texture: "stickman_panda_texture",
             atlas: "stickman_panda_json",
-            description: "Watch 1 video",
+            description: "Panda - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28610,7 +28610,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: Va.a,
             texture: "stickman_robot_texture",
             atlas: "stickman_robot_json",
-            description: "Watch 1 video",
+            description: "Robot - Watch 1 video",
             frames: {
                 spawn: 3,
                 hooked0: 2,
@@ -28626,7 +28626,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: $a.a,
             texture: "stickman_tikiman_texture",
             atlas: "stickman_tikiman_json",
-            description: "Watch 1 video",
+            description: "Tiki Man - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28637,12 +28637,12 @@ window.onerror = (ev) => {alert(ev);};
             }
         }, {
             id: "CHAR_HotDog",
-            name: "Tiki",
+            name: "HotDog",
             type: "rewarded",
             thumbnail: es.a,
             texture: "stickman_hotdog_texture",
             atlas: "stickman_hotdog_json",
-            description: "Watch 1 video",
+            description: "Ballerina Cappuccina - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28658,7 +28658,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: rs.a,
             texture: "stickman_lemonman_texture",
             atlas: "stickman_lemonman_json",
-            description: "Watch 1 video",
+            description: "Lemon Man - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28674,7 +28674,7 @@ window.onerror = (ev) => {alert(ev);};
             thumbnail: os.a,
             texture: "stickman_plantmonster_texture",
             atlas: "stickman_plantmonster_json",
-            description: "Watch 1 video",
+            description: "Plant Monster - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28693,7 +28693,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 500
             },
-            description: "Finish Level 500",
+            description: "Jerma - Finish Level 500",
             frames: {
                 spawn: 4,
                 hooked0: 3,
