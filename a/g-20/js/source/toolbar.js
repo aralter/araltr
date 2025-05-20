@@ -276,20 +276,14 @@ function toggleThemeClick() {
 
 
 function printUnauthorized(){
-	let authUrl = github_authURL();
 	consolePrint(
 			"<br>" +
-			"PuzzleScript needs permission to share games through GitHub:<br>" +
-			"<ul>" +
-			"<li><a target=\"_blank\" href=\"" + authUrl + "\">Give PuzzleScript permission</a></li>" +
-			"</ul>",true);
+			"This version of PuzzleScript doesn't support easy sharing. Send an email to becka290@isd271.org or averse.abfun@gmail.com to get a share link.<br>",true);
 }
 
 function shareClick() {
-	if (!github_isSignedIn()) {
-		printUnauthorized();
-		return;
-	}
+	printUnauthorized();
+	return;
 
 	consolePrint("<br>Sending code to github...",true)
 

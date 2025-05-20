@@ -21,27 +21,19 @@ Set it up as a cgi script on your web server. The server needs to
 provide the HTTP_ORIGIN header.
 """
 
-import cgi
+import fastcgi
 import json
 import os
 import requests
 import sys
 
-OAUTH_CLIENT = "211570277eb588cddf44"
-OAUTH_SECRET = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+OAUTH_CLIENT = "Ov23ctKddBi9uoiujYed"
+OAUTH_SECRET = "4d5cb38313b94f30dc18c8c490f390fc377e8a8c"
 ORIGIN_LIST = [
-    "www.puzzlescript.net",
-    "www.increpare.com",
-    "ded.increpare.com",
-    "increpare.github.io",
-    "sfiera.github.io",
-    "www.flickgame.org",
-    "www.tinychoice.net",
-    "tinychoice.net",
-    "www.plingpling.org",
-    "plingpling.org",
-    "www.flickgame.org",
-    "flickgame.org",
+    "ga0.queeridentity.one",
+    "ga1.queeridentity.one",
+    "hb0.queeridentity.one",
+    "hb1.queeridentity.one"
 ]
 
 LOGIN_URL = "https://github.com/login/oauth/access_token"
@@ -49,7 +41,8 @@ LOGIN_HEADERS = {
     "user-agent": "puzzlescript",
     "accept": "application/json",
 }
-
+@fastcgi()
+def run():
 origin = os.environ.get("HTTP_ORIGIN", "")
 if not origin.startswith("https://") or (origin[8:] not in ORIGIN_LIST):
     print("Content-type: text/plain")
