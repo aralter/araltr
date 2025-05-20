@@ -1,3 +1,5 @@
+window.onerror = (ev) => {alert(ev);};
+
 ! function(t) {
     var e = {};
 
@@ -28246,7 +28248,7 @@
         Da = n(38),
         Pa = n.n(Da),
         Ra = n(39),
-        Ba = n.n(Ra),
+        rainbowStickThumbnail = n.n(Ra),
         Ma = n(40),
         Oa = n.n(Ma),
         La = n(41),
@@ -28272,7 +28274,9 @@
         ns = n(51),
         rs = n.n(ns),
         is = n(52),
-        os = n.n(is);
+        os = n.n(is),
+        jermaPath = n(285);
+    var jermaThumbnail = n.n(jermaPath);
 
     function as(t) {
         return !t.condition || (t.condition.level <= Sc.instance.level + 1 || !(!t.condition.ad && !t.condition.shortcut) && (Sc.instance.playerInfos && Sc.instance.playerInfos.unlockedSkins && Sc.instance.playerInfos.unlockedSkins.includes(t.id)))
@@ -28399,7 +28403,7 @@
             id: "CHAR_RainbowStick",
             name: "Rainbow",
             type: "level",
-            thumbnail: Ba.a,
+            thumbnail: rainbowStickThumbnail.a,
             texture: "stickman_rainbow_texture",
             atlas: "stickman_rainbow_json",
             condition: {
@@ -28679,8 +28683,27 @@
                 ball: 5,
                 victory: 2
             }
+        }, {
+            id: "CHAR_Jerma",
+            name: "Jerma",
+            type: "level",
+            thumbnail: jermaThumbnail.a,
+            texture: "stickman_jerma_texture",
+            atlas: "stickman_jerma_json",
+            condition: {
+                level: 500
+            },
+            description: "Finish Level 500",
+            frames: {
+                spawn: 4,
+                hooked0: 3,
+                hooked1: 1,
+                hooked2: 0,
+                ball: 5,
+                victory: 2
+            }
         }],
-        hs = As,
+        characters = As,
         cs = function(t) {
             function e() {
                 var t, n, r;
@@ -28696,7 +28719,7 @@
                     var t = this;
                     this.interval = setInterval(function() {
                         t.setState({
-                            skinIndex: (t.state.skinIndex + 1) % hs.length
+                            skinIndex: (t.state.skinIndex + 1) % characters.length
                         })
                     }, 500)
                 }
@@ -28711,7 +28734,7 @@
                     var t = this.props,
                         e = t.text,
                         n = t.onClick,
-                        r = hs[this.state.skinIndex].thumbnail;
+                        r = characters[this.state.skinIndex].thumbnail;
                     return qo.h(da, {
                         text: e,
                         onClick: n,
@@ -29403,6 +29426,9 @@
         Fh = n(120),
         Nh = n.n(Fh),
         Uh = n(121),
+        jermaTexPath = n(286),
+        jermaTex = n.n(jermaTexPath),
+        jermaJson = n(287),
         Qh = {
             title: Ls.a,
             background_0: zs.a,
@@ -29474,7 +29500,9 @@
             stickman_lemonman_texture: Hh.a,
             stickman_lemonman_json: zh,
             stickman_plantmonster_texture: Nh.a,
-            stickman_plantmonster_json: Uh
+            stickman_plantmonster_json: Uh,
+            stickman_jerma_texture: jermaTex.a,
+            stickman_jerma_json: jermaJson,
         },
         jh = n(14),
         Xh = n.n(jh),
@@ -29512,7 +29540,7 @@
                 d()(this, e);
                 for (var i = arguments.length, o = new Array(i), a = 0; a < i; a++) o[a] = arguments[a];
                 return x()(r, (n = r = x()(this, (t = g()(e)).call.apply(t, [this].concat(o))), r.state = {
-                    unlockedSkin: hs.find(function(t) {
+                    unlockedSkin: characters.find(function(t) {
                         return t.condition && t.condition.level === Sc.instance.level + 1
                     })
                 }, r.onKeyPress = function(t) {
@@ -29955,7 +29983,7 @@
                     }, pc.map(function(e) {
                         return qo.h(cc, {
                             width: "".concat(1 / o * 100, "%"),
-                            skins: hs.filter(e.filter),
+                            skins: characters.filter(e.filter),
                             onSelectSkin: function(e) {
                                 return t.onSelectSkin(e)
                             },
@@ -30163,7 +30191,7 @@
                 width: s,
                 height: A,
                 antialias: !0
-            }))).level = 0, a.resources = null, a.scene = null, a.lastFrame = 0, a.gravity = new ta(0, 1), a.eventEmitter = new r.EventEmitter, a.paused = !1, a._playerSkin = hs[0], a.playerInfos = {}, a.features = {}, a.isRewardedReady = !1, a.interstitialReady = !1, a.lastInterstitialTime = 0, a.playedAtLeastOnce = !1, a.onResize = function() {
+            }))).level = 0, a.resources = null, a.scene = null, a.lastFrame = 0, a.gravity = new ta(0, 1), a.eventEmitter = new r.EventEmitter, a.paused = !1, a._playerSkin = characters[0], a.playerInfos = {}, a.features = {}, a.isRewardedReady = !1, a.interstitialReady = !1, a.lastInterstitialTime = 0, a.playedAtLeastOnce = !1, a.onResize = function() {
                 var t = a._optionsResize ? a._optionsResize() : null,
                     e = t ? t.width : window.innerWidth,
                     n = t ? t.height : window.innerHeight;
@@ -30196,9 +30224,9 @@
                 a.paused || (a.ticker.stop(), a.paused = !0, a.eventEmitter.emit("pause"))
             }, a.resume = function() {
                 a.paused && (a.ticker.start(), a.paused = !1, a.eventEmitter.emit("resume"))
-            }, a.width = s, a.height = A, o && o.onResize && (a._optionsResize = o.onResize), n && (a.playerInfos = n, n.skin && (a._playerSkin = hs.find(function(t) {
+            }, a.width = s, a.height = A, o && o.onResize && (a._optionsResize = o.onResize), n && (a.playerInfos = n, n.skin && (a._playerSkin = characters.find(function(t) {
                 return t.id === n.skin
-            }) || hs[0]), a.level = parseInt(a.playerInfos.level, 10) || 0), i && (a.features = i), e.instance = v()(a), window.addEventListener("resize", a.onResize);
+            }) || characters[0]), a.level = parseInt(a.playerInfos.level, 10) || 0), i && (a.features = i), e.instance = v()(a), window.addEventListener("resize", a.onResize);
             var c = {};
             return Object.keys(Qh).forEach(function(t) {
                 "object" === u()(Qh[t]) ? c[t] = Qh[t] : a.loader.add(t, Qh[t])
@@ -30472,4 +30500,342 @@
     }))().catch(function(t) {
         return console.error(t)
     })
+}, function(t, e, n) {
+    t.exports = n.p + "images/39a0c020c9d38558082462de76719e34-CHAR_Jerma_Miniature.png"
+}, function(t, e, n) {
+    t.exports = n.p + "images/04a750e897530381c3f3617199f1f224-CHAR_Jerma.png"
+}, function(t) {
+    t.exports = {
+        frames: {
+            "CHAR_Jerma0001.png": {
+                frame: {
+                    x: 457,
+                    y: 241,
+                    w: 186,
+                    h: 221
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 133,
+                    y: 133,
+                    w: 186,
+                    h: 221
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Jerma0002.png": {
+                frame: {
+                    x: 258,
+                    y: 818,
+                    w: 226,
+                    h: 201
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 148,
+                    y: 129,
+                    w: 226,
+                    h: 201
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Jerma0003.png": {
+                frame: {
+                    x: 1,
+                    y: 828,
+                    w: 190,
+                    h: 255
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 114,
+                    y: 112,
+                    w: 190,
+                    h: 255
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Jerma0004.png": {
+                frame: {
+                    x: 486,
+                    y: 758,
+                    w: 183,
+                    h: 225
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 152,
+                    y: 138,
+                    w: 183,
+                    h: 225
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Jerma0005.png": {
+                frame: {
+                    x: 215,
+                    y: 1,
+                    w: 198,
+                    h: 276
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 121,
+                    y: 93,
+                    w: 198,
+                    h: 276
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Jerma0006.png": {
+                frame: {
+                    x: 629,
+                    y: 1,
+                    w: 123,
+                    h: 123
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 169,
+                    y: 169,
+                    w: 123,
+                    h: 123
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance07.png": {
+                frame: {
+                    x: 1,
+                    y: 285,
+                    w: 214,
+                    h: 279
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 122,
+                    y: 46,
+                    w: 214,
+                    h: 279
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance08.png": {
+                frame: {
+                    x: 1,
+                    y: 1,
+                    w: 212,
+                    h: 282
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 88,
+                    y: 42,
+                    w: 212,
+                    h: 282
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance09.png": {
+                frame: {
+                    x: 427,
+                    y: 522,
+                    w: 234,
+                    h: 234
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 57,
+                    y: 90,
+                    w: 234,
+                    h: 234
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance10.png": {
+                frame: {
+                    x: 415,
+                    y: 1,
+                    w: 212,
+                    h: 238
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 105,
+                    y: 88,
+                    w: 212,
+                    h: 238
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance11.png": {
+                frame: {
+                    x: 212,
+                    y: 566,
+                    w: 213,
+                    h: 250
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 129,
+                    y: 73,
+                    w: 213,
+                    h: 250
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance12.png": {
+                frame: {
+                    x: 1,
+                    y: 566,
+                    w: 209,
+                    h: 260
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 169,
+                    y: 64,
+                    w: 209,
+                    h: 260
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance13.png": {
+                frame: {
+                    x: 217,
+                    y: 279,
+                    w: 241,
+                    h: 238
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 176,
+                    y: 86,
+                    w: 241,
+                    h: 238
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            }
+        },
+        animations: {
+            CHAR_Jerma: ["CHAR_Jerma0001.png", "CHAR_Jerma0002.png", "CHAR_Jerma0003.png", "CHAR_Jerma0004.png", "CHAR_Jerma0005.png", "CHAR_Jerma0006.png"],
+            dance: ["dance07.png", "dance08.png", "dance09.png", "dance10.png", "dance11.png", "dance12.png", "dance13.png"]
+        },
+        meta: {
+            app: "https://www.codeandweb.com/texturepacker",
+            version: "1.0",
+            image: "CHAR_Jerma.png",
+            format: "RGBA8888",
+            size: {
+                w: 1024,
+                h: 1024
+            },
+            scale: "0.9",
+            smartupdate: 
+            "$TexturePacker:SmartUpdate:00000000000000000000000000000000:00000000000000000000000000000000000000000000000000000000000000000$"
+        }
+    }
 }]);
