@@ -1,3 +1,9 @@
 [submodule "a/g-18"]
 	path = a/g-18
 	url = https://github.com/landgreen/n-gon
+[submodule "PuzzleScript"]
+	path = PuzzleScript
+	url = https://github.com/increpare/PuzzleScript
+[submodule "a/g-21"]
+	path = a/g-21
+	url = https://github.com/increpare/flickgame
