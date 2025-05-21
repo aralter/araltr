@@ -28274,8 +28274,10 @@ window.onerror = (ev) => {alert(ev);};
         rs = getModule.n(ns),
         is = getModule(52),
         os = getModule.n(is),
-        jermaPath = getModule(285);
+        jermaPath = getModule(285),
+        markPath = getModule(288);
     var jermaThumbnail = getModule.n(jermaPath);
+    var markThumbnail = getModule.n(markPath);
 
     function as(t) {
         return !t.condition || (t.condition.level <= game.instance.level + 1 || !(!t.condition.ad && !t.condition.shortcut) && (game.instance.playerInfos && game.instance.playerInfos.unlockedSkins && game.instance.playerInfos.unlockedSkins.includes(t.id)))
@@ -28370,7 +28372,7 @@ window.onerror = (ev) => {alert(ev);};
             condition: {
                 level: 20
             },
-            description: "Angel - Finish Level 20",
+            description: "Gregory House - Finish Level 20",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -28693,6 +28695,22 @@ window.onerror = (ev) => {alert(ev);};
                 level: 500
             },
             description: "Jerma - Finish Level 500",
+            frames: {
+                spawn: 4,
+                hooked0: 3,
+                hooked1: 1,
+                hooked2: 0,
+                ball: 5,
+                victory: 2
+            }
+        }, {
+            id: "CHAR_Mark",
+            name: "Mark",
+            type: "rewarded",
+            thumbnail: markThumbnail.a,
+            texture: "stickman_mark_texture",
+            atlas: "stickman_mark_json",
+            description: "Markiplier - Watch 1 video",
             frames: {
                 spawn: 4,
                 hooked0: 3,
@@ -29428,6 +29446,9 @@ window.onerror = (ev) => {alert(ev);};
         jermaTexPath = getModule(286),
         jermaTex = getModule.n(jermaTexPath),
         jermaJson = getModule(287),
+        markTexPath = getModule(289),
+        markTex = getModule.n(markTexPath),
+        markJson = getModule(290),
         Qh = {
             title: Ls.a,
             background_0: zs.a,
@@ -29502,6 +29523,8 @@ window.onerror = (ev) => {alert(ev);};
             stickman_plantmonster_json: Uh,
             stickman_jerma_texture: jermaTex.a,
             stickman_jerma_json: jermaJson,
+            stickman_mark_texture: markTex.a,
+            stickman_mark_json: markJson,
         },
         jh = getModule(14),
         Xh = getModule.n(jh),
@@ -30349,7 +30372,8 @@ window.onerror = (ev) => {alert(ev);};
                 hotdog: "CHAR_HotDog",
                 lemon: "CHAR_LemonMan",
                 tiki: "CHAR_TikiMan",
-                plant: "CHAR_Plant"
+                plant: "CHAR_Plant",
+                mark: "CHAR_Mark",
             };
             t.unlockedSkins = Object.keys(n).map(function(t) {
                 var e = Dc("Stickman_Hook_ACHIEVEMENTS_".concat(t));
@@ -30839,6 +30863,367 @@ window.onerror = (ev) => {alert(ev);};
             scale: "0.9",
             smartupdate: 
             "$TexturePacker:SmartUpdate:00000000000000000000000000000000:00000000000000000000000000000000000000000000000000000000000000000$"
+        }
+    }
+}, function(t, e, n) {
+    t.exports = n.p + "images/be3be8a5209bc98b7c19d02bb6b69cf5-CHAR_Mark_Miniature.png"
+}, function(t, e, n) {
+    t.exports = n.p + "images/df6f8ee1000c424307909a9df5a28542-CHAR_Mark.png"
+}, function(t) {
+    t.exports = {
+        frames: {
+            "CHAR_Mark0001.png": {
+                frame: {
+                    x: 409,
+                    y: 743,
+                    w: 174,
+                    h: 217
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 107,
+                    y: 130,
+                    w: 174,
+                    h: 217
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Mark0002.png": {
+                frame: {
+                    x: 426,
+                    y: 477,
+                    w: 212,
+                    h: 211
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 88,
+                    y: 125,
+                    w: 212,
+                    h: 211
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Mark0003.png": {
+                frame: {
+                    x: 446,
+                    y: 248,
+                    w: 199,
+                    h: 206
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 126,
+                    y: 166,
+                    w: 199,
+                    h: 206
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Mark0004.png": {
+                frame: {
+                    x: 224,
+                    y: 248,
+                    w: 227,
+                    h: 220
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 109,
+                    y: 126,
+                    w: 227,
+                    h: 220
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Mark0005.png": {
+                frame: {
+                    x: 223,
+                    y: 1,
+                    w: 241,
+                    h: 245
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 110,
+                    y: 114,
+                    w: 241,
+                    h: 245
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "CHAR_Mark0006.png": {
+                frame: {
+                    x: 832,
+                    y: 1,
+                    w: 123,
+                    h: 123
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 169,
+                    y: 169,
+                    w: 123,
+                    h: 123
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance07.png": {
+                frame: {
+                    x: 466,
+                    y: 1,
+                    w: 204,
+                    h: 177
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 125,
+                    y: 155,
+                    w: 204,
+                    h: 177
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance08.png": {
+                frame: {
+                    x: 645,
+                    y: 1,
+                    w: 202,
+                    h: 185
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 126,
+                    y: 144,
+                    w: 202,
+                    h: 185
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance09.png": {
+                frame: {
+                    x: 222,
+                    y: 498,
+                    w: 202,
+                    h: 243
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 126,
+                    y: 84,
+                    w: 202,
+                    h: 243
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance10.png": {
+                frame: {
+                    x: 1,
+                    y: 250,
+                    w: 221,
+                    h: 246
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 115,
+                    y: 81,
+                    w: 221,
+                    h: 246
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance11.png": {
+                frame: {
+                    x: 1,
+                    y: 498,
+                    w: 219,
+                    h: 243
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 118,
+                    y: 84,
+                    w: 219,
+                    h: 243
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance12.png": {
+                frame: {
+                    x: 1,
+                    y: 1,
+                    w: 220,
+                    h: 247
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 121,
+                    y: 80,
+                    w: 220,
+                    h: 247
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance13.png": {
+                frame: {
+                    x: 1,
+                    y: 743,
+                    w: 219,
+                    h: 243
+                },
+                rotated: !1,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 119,
+                    y: 84,
+                    w: 219,
+                    h: 243
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            "dance14.png": {
+                frame: {
+                    x: 222,
+                    y: 743,
+                    w: 219,
+                    h: 185
+                },
+                rotated: !0,
+                trimmed: !0,
+                spriteSourceSize: {
+                    x: 117,
+                    y: 144,
+                    w: 219,
+                    h: 185
+                },
+                sourceSize: {
+                    w: 461,
+                    h: 461
+                },
+                anchor: {
+                    x: 0,
+                    y: 0
+                }
+            }
+        },
+        animations: {
+            CHAR_Mark: ["CHAR_Mark0001.png", "CHAR_Mark0002.png", "CHAR_Mark0003.png", "CHAR_Mark0004.png", "CHAR_Mark0005.png", "CHAR_Mark0006.png"],
+            dance: ["dance07.png", "dance08.png", "dance09.png", "dance10.png", "dance11.png", "dance12.png", "dance13.png", "dance14.png"]
+        },
+        meta: {
+            app: "https://www.codeandweb.com/texturepacker",
+            version: "1.0",
+            image: "CHAR_Mark.png",
+            format: "RGBA8888",
+            size: {
+                w: 1024,
+                h: 1024
+            },
+            scale: "0.9",
+            smartupdate: "$TexturePacker:SmartUpdate:00000000000000000000000000000000:00000000000000000000000000000000000000000000000000000000000000000$"
         }
     }
 }]);
